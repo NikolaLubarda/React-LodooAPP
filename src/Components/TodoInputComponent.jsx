@@ -10,11 +10,7 @@ const TodoInputComponent = ({ allTodo, setAllTodo }) => {
   function handleAddTodo() {
     currentTodo === "" ? alert("upisite nesto") : console.log(currentTodo);
 
-    setAllTodo(...allTodo, currentTodo);
-
-    allTodo.map((todo) => {
-      <div key={todo}>{allTodo}</div>;
-    });
+    setAllTodo([...allTodo, { todo: currentTodo, id: new Date().getTime() }]);
 
     setCurrentTodo("");
   }

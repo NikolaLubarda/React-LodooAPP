@@ -1,10 +1,15 @@
 import "./App.css";
 import TodoInputComponent from "./Components/TodoInputComponent";
 import TodoTaskComponent from "./Components/TodoTaskComponent";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [allTodo, setAllTodo] = useState([]);
+
+  useEffect(() => {
+    console.log(allTodo);
+  }, [allTodo]);
+
   return (
     <>
       <div className="container mx-auto">
