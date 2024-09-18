@@ -25,6 +25,12 @@ const TodoTaskcomponent = ({ allTodo, setAllTodo }) => {
           </button>
         </div>
       ))}
+
+      {allTodo.length === 0 && (
+        <h1 className="text-center text-white uppercase text-2xl">
+          Dodaj neki Todo...
+        </h1>
+      )}
     </div>
   );
 };
