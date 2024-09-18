@@ -1,7 +1,11 @@
 import React from "react";
 
-const TodoTaskcomponent = ({}) => {
-  return <div>TaskComponent</div>;
+const TodoTaskcomponent = ({ allTodo }) => {
+  return (
+    <div>
+      <h1>{allTodo}</h1>
+    </div>
+  );
 };
 
 export default TodoTaskcomponent;
